@@ -1,0 +1,32 @@
+﻿@using DoAnWeb.Models
+@{
+    ViewBag.Title = "XeMay8xemay";
+    Layout = "~/Views/UserLayout.cshtml";
+}
+<div class="row">
+    @{
+        foreach (var item in Model)
+        {
+            <div class="col-3">
+                <img src="~/Image/@item.HINHANH" width="70%" height="65%" />
+                @if (item.TENXEMAY.Length > 30)
+                {
+                    <p>
+                        Tên Xe: <b>@item.TENXEMAY.Substring(0, 30)</b>
+                    </p>
+
+                }
+                else
+                {
+                    <p style="color:darkblue">
+                        Tên Xe Máy: <b style="color:black">@item.TENXEMAY</b> <br />
+                        Giá bán: <b style="color:black">@string.Format("{0:0,0}", item.GIABANXE)</b> VNĐ <br />
+
+                    </p>
+                }
+            </div>
+
+        }
+    }
+</div>
+

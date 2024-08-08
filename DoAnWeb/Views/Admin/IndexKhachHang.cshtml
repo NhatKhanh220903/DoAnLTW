@@ -1,0 +1,70 @@
+﻿@model IEnumerable<DoAnWeb.Models.KHACHHANG>
+
+@{
+    ViewBag.Title = "IndexKhachHang";
+    Layout = "~/Views/UserAdmin.cshtml";
+}
+<h2>Danh Sách Khách Hàng</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TENKHACHHANG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAYSINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GIOITINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SODIENTHOAI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TAIKHOAN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MATKHAU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIACHI)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TENKHACHHANG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAYSINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIOITINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SODIENTHOAI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TAIKHOAN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MATKHAU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIACHI)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "EditKH", new { id = item.MAKHACHHANG.Trim() }) |
+            @Html.ActionLink("Xóa", "DeleteKH", new { id = item.MAKHACHHANG.Trim() })
+        </td>
+    </tr>
+}
+
+</table>

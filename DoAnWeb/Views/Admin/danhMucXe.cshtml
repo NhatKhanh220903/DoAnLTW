@@ -1,0 +1,38 @@
+﻿@using DoAnWeb.Models
+@model List<XEMAY>
+@{
+    ViewBag.Title = "danhMucXe";
+    Layout = "~/Views/UserAdmin.cshtml";
+}
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col">
+        <h3><a href="#">Thêm sản phẩm mới</a></h3>
+    </div>
+    
+</div>
+<table class="table">
+    <tr>
+        <th>Mã Xe</th>
+        <th>Tên Xe Máy</th>
+        <th>Hình Ảnh</th>
+        <th>Đơn Giá</th>
+        <th>Thương Hiệu</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+
+    {
+        <tr>
+            <td>@item.MAXEMAY</td>
+            <td>@item.TENXEMAY</td>
+            <td><img src="~/Image/@item.HINHANH" / style="height:100px;width:125px"></td>
+            <td>@item.GIABANXE</td>
+            <td>@item.THUONGHIEUXE.TENTHUONGHIEU</td>
+            <td><a href="#">Xóa mặt hàng</a></td>
+            <td><a href="#">Sửa</a></td>
+        </tr>
+    }
+
+</table>

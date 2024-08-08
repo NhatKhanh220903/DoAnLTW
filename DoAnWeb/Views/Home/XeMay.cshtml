@@ -1,0 +1,61 @@
+﻿@using DoAnWeb.Models
+@{
+    ViewBag.Title = "XeMay";
+    Layout = "~/Views/UserLayout.cshtml";
+}
+<div class="row">
+    @{
+        foreach (var item in Model)
+        {
+            <div class="col-4">
+                <img src="~/Image/@item.HINHANH" width="70%" height="65%" />
+                @if (item.TENXEMAY.Length > 30)
+                {
+                    <p>
+                        Tên Xe: <b>@item.TENXEMAY.Substring(0, 30)</b>
+
+                        <a href="/Home/XeMay?ms=@item.MAXEMAY">Xem Chi Tiet</a>
+                    </p>
+
+                }
+                else
+                {
+                    <p>
+                        Tên Xe Máy: <b>@item.TENXEMAY</b> <br />
+                        Giá bán: <b>@string.Format("{0:0,0}", item.GIABANXE)</b> VNĐ <br />
+                        <a href="@Url.Action("XemThongTinXe", new { MaXe = @item.MAXEMAY })">xem chi tiết</a>
+                    </p>
+                }
+
+            </div>
+
+        }
+
+    }
+</div>
+@*<div style="margin-left: 35%">
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            @if (Model.PageCount > 1)
+            {
+                <li class="page-item @(Model.IsFirstPage ? "disabled" : "")">
+                    <a class="page-link" href="@Url.Action("XeMay", "Home", new { page = 1 })" tabindex="-1" aria-disabled="@(Model.IsFirstPage ? "true" : "false")"><<</a>
+                </li>
+                for (int i = 1; i <= Model.PageCount; i++)
+                {
+                    <li class="page-item @(i == Model.PageNumber ? "active" : "")">
+                        <a class="page-link" href="@Url.Action("XeMay", "Home",  new { page = i })">@i</a>
+                    </li>
+                }
+
+                <li class="page-item @(Model.IsLastPage ? "disabled" : "")">
+                    <a class="page-link" href="@Url.Action("XeMay", "Home", new { page = Model.PageNumber + 1 })">>></a>
+                </li>
+
+            }
+        </ul>
+    </nav>
+
+
+</div>*@
+

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<DoAnWeb.Models.THUONGHIEUXE>
+
+@{
+    ViewBag.Title = "IndexThuongHieu";
+    Layout = "~/Views/UserAdmin.cshtml";
+}
+
+<h2>IndexThuongHieu</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "CreateTH")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TENTHUONGHIEU)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TENTHUONGHIEU)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "EditTH", new { id = item.MATHUONGHIEU.Trim() }) |
+            @Html.ActionLink("Xóa", "DeleteTH", new { id = item.MATHUONGHIEU.Trim() })
+        </td>
+    </tr>
+}
+
+</table>

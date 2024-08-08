@@ -121,6 +121,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -130,6 +131,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
+    <Compile Include="PagedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +163,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\Site1.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -177,6 +181,7 @@
     <Content Include="Image\Anh2.jpg" />
     <Content Include="Image\Anh3.jpg" />
     <Content Include="Image\Artboard 1%402x.png" />
+    <Content Include="Image\Banner.jpg" />
     <Content Include="Image\baohanh.png" />
     <Content Include="Image\co-anh.png" />
     <Content Include="Image\contact.png" />
@@ -272,12 +277,38 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\UserLayout.cshtml" />
     <Content Include="Views\Home\XeMay8xemay.cshtml" />
+    <Content Include="Views\Home\LoaiXe.cshtml" />
+    <Content Include="Views\Home\DangKyTK.cshtml" />
+    <Content Include="Views\Home\DangNhapTK.cshtml" />
+    <Content Include="Views\Login.cshtml" />
+    <Content Include="Views\UserAdmin.cshtml" />
+    <Content Include="Views\Admin\IndexAdmin.cshtml" />
+    <Content Include="Views\Admin\IndexKhachHang.cshtml" />
+    <Content Include="Views\Admin\IndexThuongHieu.cshtml" />
+    <Content Include="Views\Admin\IndexNhaCC.cshtml" />
+    <Content Include="Views\Admin\danhMucXe.cshtml" />
+    <Content Include="Views\Admin\EditLX.cshtml" />
+    <Content Include="Views\Admin\EditTH.cshtml" />
+    <Content Include="Views\Admin\DeleteTH.cshtml" />
+    <Content Include="Views\Admin\CreateTH.cshtml" />
+    <Content Include="Views\Admin\CreateNCC.cshtml" />
+    <Content Include="Views\Admin\EditKH.cshtml" />
+    <Content Include="Views\Admin\DeleteKH.cshtml" />
+    <Content Include="Views\Admin\DeleteNCC.cshtml" />
+    <Content Include="Views\Shared\footer.cshtml" />
+    <Content Include="Views\Shared\menu.cshtml" />
+    <Content Include="Views\Shared\slide.cshtml" />
+    <Content Include="Views\Shared\_LayoutMain.cshtml" />
+    <Content Include="Views\ViewShareDangNhap.cshtml" />
+    <Content Include="Views\ViewTrangChu.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Main.cshtml" />
+    <Content Include="Views\Home\XeMay.cshtml" />
+    <Content Include="Views\UserLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

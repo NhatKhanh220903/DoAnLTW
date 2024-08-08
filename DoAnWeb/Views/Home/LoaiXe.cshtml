@@ -1,0 +1,10 @@
+﻿@using DoAnWeb.Models
+@model List<LOAIXE>
+<ul class="nav flex-column">
+    @foreach (LOAIXE cd in @Model)
+    {
+        <li class="nav-item border">
+            <a class="nav-link" href="~/Home/timKiem/?maLoai=@cd.MALOAIXE">@cd.TENLOAIXE</a>
+        </li>
+    }
+</ul>

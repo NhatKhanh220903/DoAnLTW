@@ -1,0 +1,39 @@
+﻿@model IEnumerable<DoAnWeb.Models.NHACUNGCAP>
+
+@{
+    ViewBag.Title = "IndexNhaCC";
+    Layout = "~/Views/UserAdmin.cshtml";
+}
+
+<h2>Các nhà cung cấp</h2>
+<a href="/Admin/CreateNCC">Thêm nhà cung cấp</a>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TENNCC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIACHI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SODIENTHOAI)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TENNCC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIACHI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SODIENTHOAI)
+        </td>
+        <th>@Html.ActionLink("Xóa", "DeleteNCC", new { id = item.MANCC.Trim() })</th>
+    </tr>
+}
+
+</table>
